@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI活用で成果を出した企業がやっていた3つのこと｜無料セミナー</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { font-size: 16px; scroll-behavior: smooth; }
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #f5f7fb;
+    color: #1a1a2e;
+    line-height: 1.7;
+  }
+
+  /* ── WRAPPER ── */
+  .lp-wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 2px 40px rgba(0,0,0,0.08);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, #0d1b3e 0%, #1a3a6e 55%, #1e5a9c 100%);
+    padding: 60px 40px 52px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 260px; height: 260px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -40px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.03);
+  }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,255,255,0.28);
+    color: #d0e8ff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    padding: 5px 16px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: #7ec8f4;
+    border-bottom: 2px solid rgba(126,200,244,0.4);
+  }
+  .hero-desc {
+    color: #a8c8e8;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-tags {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-tags span {
+    color: #e0f0ff;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .hero-tags span::before {
+    content: '✓';
+    color: #7ec8f4;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  /* ── VIDEO ── */
+  .section-video {
+    padding: 36px 40px;
+    background: #f2f6fb;
+    border-bottom: 1px solid #e2ecf6;
+  }
+  .section-video .label {
+    text-align: center;
+    font-size: 13px;
+    color: #4a6fa5;
+    font-weight: 700;
+    margin-bottom: 14px;
+    letter-spacing: 0.02em;
+  }
+  /* ====================================================
+     Vimeo埋め込みエリア
+     動画完成後、下の <div class="video-placeholder"> を
+     Vimeoの埋め込みコード（<iframe...>）に丸ごと置き換えてください
+  ==================================================== */
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #0d1b3e;
+    border: 2px solid #dce8f5;
+  }
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: none;
+    border-radius: 10px;
+  }
+  /* 動画未設置の場合のプレースホルダー（動画設置後は削除可） */
+  .video-placeholder {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #7ea8c8;
+    font-size: 13px;
+  }
+  .play-circle {
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+    border: 2px solid rgba(255,255,255,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .play-triangle {
+    border-style: solid;
+    border-width: 11px 0 11px 20px;
+    border-color: transparent transparent transparent #fff;
+    margin-left: 4px;
+  }
+  .video-note {
+    text-align: center;
+    font-size: 11px;
+    color: #8a9ab0;
+    margin-top: 10px;
+  }
+
+  /* ── SECTION BASE ── */
+  .section {
+    padding: 44px 40px;
+  }
+  .section-alt {
+    background: #f7f9fc;
+  }
+  .section-header {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  .section-header h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #0d1b3e;
+    margin-bottom: 6px;
+  }
+  .section-header p {
+    font-size: 13px;
+    color: #6b7fa0;
+  }
+
+  /* ── TARGET ── */
+  .target-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .target-card {
+    background: #f0f6ff;
+    border-left: 3px solid #2563eb;
+    border-radius: 6px;
+    padding: 14px 16px;
+    font-size: 13px;
+    color: #1e3a6e;
+    line-height: 1.6;
+  }
+
+  /* ── TIMELINE ── */
+  .timeline { list-style: none; }
+  .tl-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding-bottom: 4px;
+  }
+  .tl-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .tl-dot {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: #1a3a6e;
+    color: #fff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .tl-line {
+    width: 2px; height: 24px;
+    background: #dce8f5;
+    flex-shrink: 0;
+  }
+  .tl-body { padding: 4px 0 20px; }
+  .tl-time {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    color: #2563eb;
+    background: #e8f0ff;
+    padding: 1px 8px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+  }
+  .tl-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0d1b3e;
+    margin-bottom: 3px;
+  }
+  .tl-desc {
+    font-size: 12px;
+    color: #6b7fa0;
+  }
+
+  /* ── CTA ── */
+  .section-cta {
+    padding: 44px 40px;
+    background: linear-gradient(160deg, #f0f6ff 0%, #e8f0fe 100%);
+    border-top: 1px solid #dce8f5;
+    text-align: center;
+  }
+  .cta-eyebrow {
+    font-size: 12px;
+    color: #4a6fa5;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+  }
+  .cta-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #0d1b3e;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+  .cta-desc {
+    font-size: 13px;
+    color: #5a7a9a;
+    margin-bottom: 28px;
+    line-height: 1.8;
+  }
+
+  /* ── FORM ── */
+  .form-card {
+    background: #fff;
+    border: 1px solid #dce8f5;
+    border-radius: 12px;
+    padding: 28px;
+    max-width: 460px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  /* ====================================================
+     フォーム設置方法
+     1. forms.google.com でフォームを作成する
+     2. 「送信」→「< >（埋め込み）」タブのiframeコードを取得
+     3. 下の <div class="form-placeholder"> を
+        そのiframeコードに丸ごと置き換える
+  ==================================================== */
+  .form-placeholder {
+    text-align: center;
+    padding: 20px;
+    color: #8a9ab0;
+    font-size: 13px;
+    border: 1px dashed #c8d8ee;
+    border-radius: 8px;
+    line-height: 1.8;
+  }
+  .form-placeholder strong {
+    display: block;
+    color: #4a6fa5;
+    margin-bottom: 4px;
+  }
+  /* フォーム設置後はこのCSSを使用（iframe用） */
+  .form-card iframe {
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    min-height: 480px;
+  }
+  .form-note {
+    text-align: center;
+    font-size: 11px;
+    color: #8a9ab0;
+    margin-top: 12px;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: #0d1b3e;
+    padding: 24px 40px;
+    text-align: center;
+  }
+  .footer p {
+    font-size: 12px;
+    color: #5a7a9a;
+    line-height: 1.8;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 560px) {
+    .hero { padding: 44px 24px 40px; }
+    .hero h1 { font-size: 21px; }
+    .section, .section-cta { padding: 36px 24px; }
+    .section-video { padding: 28px 24px; }
+    .target-grid { grid-template-columns: 1fr; }
+    .form-card { padding: 20px 16px; }
+    .footer { padding: 20px 24px; }
+  }
+</style>
+</head>
+<body>
+<main class="lp-wrap">
+
+  <!-- ▼ HERO -->
+  <section class="hero">
+    <div class="badge">無料・約15分のオンラインセミナー</div>
+    <h1>AI活用で成果を出した企業が<br>やっていた<em>3つのこと</em></h1>
+    <p class="hero-desc">
+      弊社主催「AI活用交流会」の実績をもとに<br>
+      実例・数字でわかりやすくお届けします
+    </p>
+    <div class="hero-tags">
+      <span>約15分で視聴完了</span>
+      <span>いつでも視聴可能</span>
+      <span>完全無料</span>
+    </div>
+  </section>
+
+  <!-- ▼ VIDEO（Vimeo埋め込みエリア） -->
+  <section class="section-video">
+    <p class="label">▼ こちらからセミナー動画をご覧ください</p>
+    <div class="video-wrapper">
+
+      <!-- =====================================================
+        【設置手順】
+        1. Vimeoで動画を開く
+        2. 「共有（Share）」→「埋め込みコード（Embed）」をコピー
+        3. 下の <div class="video-placeholder">〜</div> を
+           コピーした <iframe src="https://player.vimeo.com/..."> に置き換える
+
+        置き換え例：
+        <iframe src="https://player.vimeo.com/video/XXXXXXXXX?h=XXXX"
+                width="640" height="360"
+                frameborder="0" allow="autoplay; fullscreen"
+                allowfullscreen></iframe>
+      ====================================================== -->
+      <div class="video-placeholder">
+        <div class="play-circle"><div class="play-triangle"></div></div>
+        <span>Vimeo動画を埋め込む場所です<br>動画完成後にiframeコードと置き換えてください</span>
+      </div>
+
+    </div>
+    <p class="video-note">※ PCでもスマートフォンでも視聴いただけます</p>
+  </section>
+
+  <!-- ▼ こんな方におすすめ -->
+  <section class="section">
+    <div class="section-header">
+      <h2>こんな方におすすめです</h2>
+      <p>以下に当てはまる方はぜひご覧ください</p>
+    </div>
+    <div class="target-grid">
+      <div class="target-card">AIを導入したいが何から始めるかわからない</div>
+      <div class="target-card">AI活用を試みたが成果につながっていない</div>
+      <div class="target-card">他社がどんな取り組みをしているか知りたい</div>
+      <div class="target-card">営業活動や業務効率化にAIを活かしたい</div>
+    </div>
+  </section>
+
+  <!-- ▼ セミナー内容 -->
+  <section class="section section-alt">
+    <div class="section-header">
+      <h2>セミナー内容（15分）</h2>
+      <p>交流会の実績・事例をもとに構成しています</p>
+    </div>
+    <ul class="timeline">
+      <li class="tl-item">
+        <div class="tl-left"><div class="tl-dot">①</div><div class="tl-line"></div></div>
+        <div class="tl-body">
+          <span class="tl-time">2分</span>
+          <p class="tl-title">つかみ：使える会社・使えない会社の差</p>
+          <p class="tl-desc">AI交流会で見えてきた決定的な違いとは</p>
+        </div>
+      </li>
+      <li class="tl-item">
+        <div class="tl-left"><div class="tl-dot">②</div><div class="tl-line"></div></div>
+        <div class="tl-body">
+          <span class="tl-time">3分</span>
+          <p class="tl-title">AI活用で躓く3つのパターン</p>
+          <p class="tl-desc">中小企業に多い失敗例と回避策</p>
+        </div>
+      </li>
+      <li class="tl-item">
+        <div class="tl-left"><div class="tl-dot">③</div><div class="tl-line"></div></div>
+        <div class="tl-body">
+          <span class="tl-time">6分</span>
+          <p class="tl-title">実例紹介：成果が出た企業の共通点</p>
+          <p class="tl-desc">数字・Before/Afterで具体的に解説</p>
+        </div>
+      </li>
+      <li class="tl-item">
+        <div class="tl-left"><div class="tl-dot">④</div><div class="tl-line"></div></div>
+        <div class="tl-body">
+          <span class="tl-time">2分</span>
+          <p class="tl-title">自社に合ったAI活用の第一歩</p>
+          <p class="tl-desc">すぐに実践できる最初のステップ</p>
+        </div>
+      </li>
+      <li class="tl-item">
+        <div class="tl-left"><div class="tl-dot">⑤</div></div>
+        <div class="tl-body">
+          <span class="tl-time">2分</span>
+          <p class="tl-title">個別相談のご案内</p>
+          <p class="tl-desc">御社の状況に合わせたご提案が可能です</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ▼ CTA・フォームエリア -->
+  <section class="section-cta">
+    <p class="cta-eyebrow">↓ セミナーをご視聴いただいた方へ</p>
+    <h2 class="cta-title">個別相談・お申し込みはこちら</h2>
+    <p class="cta-desc">
+      30分のオンライン相談で<br>
+      御社に合ったAI活用をご提案いたします
+    </p>
+    <div class="form-card">
+
+      <!-- =====================================================
+        【設置手順】
+        1. forms.google.com でフォームを作成する
+           質問順：Q1.メールアドレス（必須）/ Q2.お名前 / Q3.会社名 / Q4.ご感想
+        2. フォーム右上「送信」→「< >（埋め込み）」タブ
+        3. 幅640・高さ600に設定してiframeコードをコピー
+        4. 下の <div class="form-placeholder">〜</div> を
+           コピーしたiframeコードに置き換える
+
+        置き換え例：
+        <iframe src="https://docs.google.com/forms/d/e/XXXXX/viewform?embedded=true"
+                width="640" height="600" frameborder="0">読み込んでいます…</iframe>
+      ====================================================== -->
+      <div class="form-placeholder">
+        <strong>Googleフォームを埋め込む場所です</strong>
+        フォーム作成後にiframeコードと置き換えてください<br>
+        （手順はLP作成手順書をご参照ください）
+      </div>
+
+    </div>
+    <p class="form-note">送信後、担当よりメールにてご連絡いたします</p>
+  </section>
+
+  <!-- ▼ FOOTER -->
+  <footer class="footer">
+    <p>
+      株式会社〇〇 ／ 担当：田中 太郎<br>
+      <!-- メールアドレスを記載する場合はここに追加 -->
+    </p>
+  </footer>
+
+</main>
+</body>
+</html>
